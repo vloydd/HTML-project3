@@ -164,7 +164,7 @@ html, body {
 .image-slider .swiper-button-next::after {
     background-image: url(../img/slider_next.png);
 }
-.buttonsl {
+.buttonslider {
     padding: 0px 10px;
     width: 980px;
     margin:auto;
