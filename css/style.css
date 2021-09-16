@@ -220,7 +220,6 @@ ul.breadcr li+li:before {
     width: 180px;
     margin: 0;
     padding: 0;
-    font-family: 'PT Sans';
     font-size: 15px;
     line-height: 30px;
     font-weight: 400;
@@ -228,11 +227,23 @@ ul.breadcr li+li:before {
     color: #767676;
     text-decoration: none;
 }
+.show {
+font-size: 18px;
+line-height: 30px;
+font-weight: 400;
+letter-spacing: 0.025em;
+color: #767676;
+}
 .active li {
     text-decoration: underline;
 }
-.categories li {
+.categories li  a{
     list-style: none;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #767676;
 }
 .subcategories {
     padding: 0 0 0 19px;
@@ -266,7 +277,7 @@ ul.breadcr li+li:before {
 /*CENTERBLOCK OF CATALOLOG*/
 .centerblock {
     /*display: flex;
-   /* flex-direction: column;*/ 
+    /* flex-direction: column;*/ 
     margin: auto;
     margin-bottom: 202px;
     width: 780px;   
@@ -297,13 +308,18 @@ ul.breadcr li+li:before {
 .view-item {
     margin-bottom: 20px;
 }
+.titlecat {
+    padding: 0;
+    margin: 0 42px 0 20px;
+    height: 35px;
+}
 .titlecat a {
-    font-size: 15px;
-    line-height: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 18px;
     font-weight: 400;
     color: #767676;
-    margin: 0 42px 0 20px;
-    text-decoration: none;
+    height: 35px;
 }
 .descrcat {
     font-size: 18px;
@@ -330,11 +346,12 @@ ul.breadcr li+li:before {
     width: 28px;
     height: 21px;
 }
-
+.basket {
+    margin-left: auto;
+}
 .basketimg {
     width: 28px;
     height: 21px;
-    margin-left: auto;
 }
 /*  .product li {
     list-style: none;
