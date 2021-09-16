@@ -237,7 +237,7 @@ color: #767676;
 .active li {
     text-decoration: underline;
 }
-.categories li  a{
+.categories li {
     list-style: none;
     font-size: 18px;
     line-height: 30px;
@@ -247,9 +247,23 @@ color: #767676;
 }
 .subcategories {
     padding: 0 0 0 19px;
+    font-size: 14px;
+line-height: 22px;
+text-decoration: underline;
 }
-.subcategories li   {
+/*.subcategories li   {
     list-style: disc;
+    font-size: 14px;
+line-height: 22px;
+text-decoration: underline; 
+}
+.subcategories li, .show {
+    font-size: 14px;
+    line-height: 22px;
+}*/
+.hide {
+    font-size: 18px;
+
 }
 /*.subcategories li:visited {
     color: black;
