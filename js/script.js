@@ -13,9 +13,10 @@ new Swiper ('.image-slider', {
     
     touchRatio: 1,
     freeMode: true,
-    // pagination
+    pagination: false,
+    scrollContainer: false,
    // pagination: '.swiper-pagination',
-    paginationClickable: true,
+    //paginationClickable: true,
     keyboard: {
         enabled: true,
         onlyInViewport: true,
@@ -42,3 +43,47 @@ new Swiper ('.image-slider', {
 
 
 });
+
+/*for ( let li of categories.querySelectorAll ('li')){
+    let span = document.createElement('span');
+    span.classList.add('show');
+    li.prepend (span);
+    span.append(span.nextSibling)
+}
+categories.onclick = function (event) {
+    if (event.target.tagName != 'SPAN') return;
+    //if (event.target.tagName == 'SPAN')
+    let childCont = event.target.parentNode.querySelector('ul');
+    if (!childCont) return;
+    childCont.hidden=!childCont.hidden;
+}*/
+
+for (let li of categories.querySelectorAll("li")) {
+    let span = document.createElement("span");
+    span.classList.add("show");
+    li.prepend(span);
+    span.append(span.nextSibling);
+}
+
+categories.onclick = function (event) {
+    if (event.target.tagName != "SPAN") return;
+        let childrenList = event.target.parentNode.querySelector("ul");
+    if (!childrenList) return;
+    childrenList.hidden = !childrenList.hidden;
+
+    if (childrenList.hidden) {
+        event.target.classList.add("hide");
+        event.target.classList.remove("show");
+    } else {
+        event.target.classList.add("show");
+        event.target.classList.remove("hide");
+    }
+};
+/*var i;
+var ctg = document.getElementsByClassName("categories");
+for (i = 0; i < ctg.length; i++) {
+    ctg[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+    });
+}*/
