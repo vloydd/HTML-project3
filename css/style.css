@@ -294,6 +294,17 @@ ul.breadcr li+li:before {
     width: 210px;
     height: 209px;
 }
+.view-item {
+    margin-bottom: 20px;
+}
+.titlecat a {
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 400;
+    color: #767676;
+    margin: 0 42px 0 20px;
+    text-decoration: none;
+}
 .descrcat {
     font-size: 18px;
     line-height: 18px;
@@ -303,7 +314,7 @@ ul.breadcr li+li:before {
 }
 .basketprice {
     display: flex;
-    margin: 55px 36px 14px 18px;   
+    margin: 50px 36px 14px 18px;   
 }
 .price {
     margin: 0;
@@ -313,6 +324,13 @@ ul.breadcr li+li:before {
     color: #444444;
     margin-right: auto;
 }
+.basketprice a {
+    line-height: 0;
+    margin: 0;
+    width: 28px;
+    height: 21px;
+}
+
 .basketimg {
     width: 28px;
     height: 21px;
