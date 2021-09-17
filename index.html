@@ -12,6 +12,44 @@
 </head>
 <body>
     <div id="container">
+        <!--<form class="myform" action="forms.php" method="GET"> <!--PHP REQUIRED-->
+            <div id="modal" class="modal">
+                <a href="#" class="modaloutside"></a>
+            <div class="modalbody">
+                <div class="modalcontent">
+                    <div class="modalmain">
+                        <div class="modaltitle">
+                            <p>Обратная связь</p>
+                        </div>
+                        <form class="myform" action="#" method="post">
+                            <label>Ваше имя *</label>
+                            
+                            <input type="text" name="name">
+                            
+                            <label>Телефон *</label>
+                            
+                            <input type="text" name="nubmer">
+                            
+                            <label>Email*</label>
+                            
+                            <input type="email" name="email">
+                            
+                            <label>Сообщение</label>
+                            <input type="text" class="message" >
+                            
+                           
+                                
+                            <input type="submit" name="submit" value="ОТПРАВИТЬ">
+                        </form>
+                        <a href="#" class="modalclose"><img class="modalcloseimg"
+                            src="img/closefeedback.png"
+                            title="closemodal"
+                            alt="closefeedbackimg"> 
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--HEADER-->
         <header class="header">
             <div class="head">
@@ -25,6 +63,9 @@
                             <div class="contacts">
                                 <p>+7(499) 777-77-77</p>
                                 <p>+7(499) 777-77-77</p>
+                                <div class="feedback">
+                                    <a href="#modal">Обратная связь</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -95,53 +136,75 @@
                     <div class="catalogbl">
                         <div class="leftblock">
                             <ul class="categories" id="categories">
-                                <li>Автомобили
+                                <li>
+                                    <details>
+                                        <summary>Автомобили</summary>
                                     <ul class="subcategories">
                                         <li>Легковые</li>
                                         <li>Фургоны</li>
                                         <li>Грузовики</li>
                                         <li>Спецтехника</li>
                                     </ul>
+                                    </details>  
                                 </li>
-                                <li>Бытовая техника
-                                    <ul class="subcategories">
-                                        <li>Микроволновки</li>
-                                        <li>Холодильники</li>
-                                        <li>Посудомоечные машины</li>
-                                        <li>Чайники</li>
-                                    </ul>
+                                <li>
+                                    <details>
+                                        <summary>Бытовая техника</summary>
+                                        <ul class="subcategories">
+                                            <li>Микроволновки</li>
+                                            <li>Холодильники</li>
+                                            <li>Посудомоечные машины</li>
+                                            <li>Чайники</li>
+                                        </ul>   
+                                    </details>
                                 </li>
-                                <li>Мобильная техника
-                                    <ul class="subcategories">
-                                        <li>Смартфоны</li>
-                                        <li>Планшеты</li>
-                                        <li>Ноутбуки</li>
-                                        <li>GPS-навигаторы</li>
-                                    </ul>
+                                <li>
+                                    <details>
+                                        <summary>Мобильная техника</summary>
+                                        <ul class="subcategories">
+                                            <li>Смартфоны</li>
+                                            <li>Планшеты</li>
+                                            <li>Ноутбуки</li>
+                                            <li>GPS-навигаторы</li>
+                                        </ul>
+                                    </details>
                                 </li>
-                                <li>Компьютеры
-                                    <ul class="subcategories">
-                                        <li>Комплектующие</li>
-                                        <li>Мониторы</li>
-                                        <li>Программы</li>
-                                        <li>Кабеля</li>
-                                    </ul>
+                                <li>
+                                    <details>
+                                        <summary>Компьютеры</summary>
+                                        <ul class="subcategories">
+                                            <li>Комплектующие</li>
+                                            <li>Мониторы</li>
+                                            <li>Программы</li>
+                                            <li>Кабеля</li>
+                                        </ul>
+                                    </details>
                                 </li>
-                                <li>Одежда
-                                    <ul class="subcategories">
-                                        <li>Женская</li>
-                                        <li>Мужская</li>
-                                        <li>Детская</li>
-                                        <li>Универсальная</li>
-                                    </ul>
+                                <li>
+                                    <details>
+                                        <summary>
+                                            Одежда
+                                        </summary>
+                                        <ul class="subcategories">
+                                            <li>Женская</li>
+                                            <li>Мужская</li>
+                                            <li>Детская</li>
+                                            <li>Универсальная</li>
+                                        </ul>
+                                    </details>
                                 </li>
-                                <li>Недвижимость
-                                    <ul class="subcategories">
-                                        <li>Домы</li>
-                                        <li>Квартиры</li>
-                                        <li>Таунхаусы</li>
-                                        <li>Офисы</li>
-                                    </ul>
+                                <li>
+                                    <details>
+                                        <summary>
+                                            Недвижимость
+                                        </summary>
+                                        <ul class="subcategories">
+                                            <li>Домы</li>
+                                            <li>Квартиры</li>
+                                            <li>Таунхаусы</li>
+                                            <li>Офисы</li>
+                                        </ul>
+                                    </details>
                                 </li>
                             </ul>
                                 <img class="leftlogo"

@@ -44,9 +44,11 @@ html, body {
 .headcont {
     width: 980px;
     display: flex;
-    align-items: center;
+    margin-top: 45px;
+    margin-bottom: 65px;
 }
 .logo {
+    margin-top: auto;
     display: block;
     height:100px;
     width:273px;
@@ -55,7 +57,8 @@ html, body {
 .contacts {
     display: block;
     margin-left: auto; 
-    height: 82px;   
+    margin-bottom: auto;
+    height: 120px;   
     text-align: center;
 }
 .contacts p {
@@ -64,8 +67,20 @@ html, body {
     font-size: 29px;
     line-height: 41px;
     font-weight: 300;
-    letter-spacing: 0.025em;
     color: #767676;
+}
+.contacts a {
+    font-size: 24px;
+    height: 23px;
+    font-weight: 900;
+    color: #767676;
+    text-decoration: none;
+    margin: 11px 0 0 auto;
+    border-bottom:dashed #767676 2px;
+}
+.feedback {
+    margin-left: auto;
+    text-align: right;
 }
 
 
@@ -112,6 +127,7 @@ html, body {
     text-decoration: none;
     margin: 0 20px;
     margin-bottom: 5px;
+    height: 27px;
 }
 .menu li:last-child {
     border-right: none;
@@ -227,15 +243,19 @@ ul.breadcr li+li:before {
     color: #767676;
     text-decoration: none;
 }
-.show {
-font-size: 18px;
-line-height: 30px;
-font-weight: 400;
-letter-spacing: 0.025em;
-color: #767676;
+.categories, .show {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.subcategories, .show {
+    font-size: 14px;
+    line-height: 22px;
+    color: #767676;
 }
 .active li {
     text-decoration: underline;
+    color: #010101;
 }
 .categories li {
     list-style: none;
@@ -251,13 +271,13 @@ color: #767676;
 line-height: 22px;
 text-decoration: underline;
 }
-/*.subcategories li   {
+.subcategories li   {
     list-style: disc;
     font-size: 14px;
-line-height: 22px;
-text-decoration: underline; 
+    line-height: 22px;
+    text-decoration: underline; 
 }
-.subcategories li, .show {
+/*.subcategories li, .show {
     font-size: 14px;
     line-height: 22px;
 }*/
@@ -306,6 +326,8 @@ text-decoration: underline;
     flex-direction: row;
     padding: 0;
     margin:0;
+    width: 780px;
+    height: 780px;
 }
 .view-item {
     width: 250px;
@@ -313,14 +335,13 @@ text-decoration: underline;
     display: block;
     background-color: #dcdcdc;
     display: inline-block;
+    /*margin-bottom: 20px;*/
+    margin: auto;   
 }
 .productimg {
     margin: 20px;
     width: 210px;
     height: 209px;
-}
-.view-item {
-    margin-bottom: 20px;
 }
 .titlecat {
     padding: 0;
@@ -405,7 +426,7 @@ text-decoration: underline;
 .pager {
     list-style:none;
     padding: 0;
-        margin: 10px auto 65    px auto;
+        margin: 10px auto 65px auto;
     text-align: center;
 
 }
@@ -547,6 +568,146 @@ text-decoration: underline;
 .categories span {
     cursor: pointer;
 }
+
+.modal {
+    z-index:9999; 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    left: 0;
+    top: 0;
+    /*opacity: 0;
+    visibility: none;*/
+    display: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.modal:target {
+    display: block;
+    /* opacity: 1;
+    visibility: visible;*/
+}
+.modaloutside {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.modalbody {
+    min-height :100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px  10px; 
+}   
+.modalcontent {
+    background-color: #ffffff;
+    color: #535353;
+    width: 466px;
+    height: 578px; 
+    position: relative; 
+}
+.modalmain {
+    margin: 35px 0 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modaltitle {
+    margin-bottom: 30px;
+    height: 18px;
+}
+.modaltitle p {
+    font-size: 23px;
+    line-height: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #535353;
+    margin: 0;
+}
+.modalclose {
+    display: flex;
+    width: 27px;
+    height: 27px;
+    align-items: center;
+    justify-content: center;    
+    position: absolute;
+    right: -27px;
+    top: -27px;
+    background-color: #777777;
+    
+}
+.medalcloseimg {
+    display:block;
+    width: 15px;
+    height: 15px;
+}
+.modalclose a {
+    margin: 0;  
+    text-decoration: none;
+}
+
+.myform {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 0px 20px;
+    margin: 0 auto;
+}
+.myform .form-group  {
+    padding-bottom: 2px;
+
+}
+.myform label {
+    display: block;
+    margin: 0 auto 5px auto;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #535353;
+    height: 11px;
+}
+.myform.textarea {
+    width: 341px;
+    height: 142px;
+    background-color: #ffffff;
+    border: 1px solid #c3c3c3;
+}
+.myform input {
+    margin: 0 auto;
+    width: 341px;
+    height: 42px;
+    background-color: #ffffff;
+    border: 1px solid #c3c3c3;
+    padding: 0 10px;
+}
+.myform input[type="submit"] {
+    width: 128px;
+    height: 42px;
+    color: #ffffff;
+    background-color: #777777;
+    border: 0;
+    margin-bottom: 0;
+}
+.message {
+    width: 341px;
+    height: 142px!important;
+    background-color: #ffffff;
+    border: 1px solid #c3c3c3;
+}
+
+details summary {
+    cursor: pointer;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+details {
+    list-style: disc;
+}
+
+
 /*https://swiperjs.com/swiper-api#swiper-full-html-layout
 https://codepen.io/aaronkahlhamer/embed/oeVQxQ?#result-box
 https://medium.com/@networkaaron/swiper-relocating-previous-and-next-buttons-1ae792f22ef

@@ -22,10 +22,10 @@ new Swiper ('.image-slider', {
         onlyInViewport: true,
         pageUpDown: true,
     },
-    mousewheel: {
+    /*mousewheel: {
         sensitivity: 5,
         eventntsTarget: ".image-slider",
-    },
+    },*/
     slidesPerView: 1,
     watchOverflow: true,
     initialSlide: 0,
