@@ -58,7 +58,10 @@ categories.onclick = function (event) {
     childCont.hidden=!childCont.hidden;
 }*/
 
-for (let li of categories.querySelectorAll("li")) {
+
+
+
+/*for (let li of categories.querySelectorAll("li")) {
     let span = document.createElement("span");
     span.classList.add("show");
     li.prepend(span);
@@ -87,3 +90,33 @@ for (i = 0; i < ctg.length; i++) {
         var panel = this.nextElementSibling;
     });
 }*/
+
+
+
+
+/*function fadeOUT() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.add("");
+}*/
+ /*   function fadeOUT() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.add("hide");
+    }*/
+
+
+ /*   function fadeIn() {
+        var div = document.getElementById("myPopup"); 
+        div.style.display = 'block'; 
+        div.classList.add("show");
+      }
+      */
+
+function fadeIN() {
+        var div= document.getElementById("Popup");  
+        div.classList.add("show");
+}
+function fadeOUT(){
+        var div = document.getElementById("Popup"); 
+        div.classList.add("hide");
+        div.style.display = 'none'; 
+}

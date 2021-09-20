@@ -13,44 +13,7 @@
 <body>
     <div id="container">
         <!--<form class="myform" action="forms.php" method="GET"> <!--PHP REQUIRED-->
-            <div id="modal" class="modal">
-                <a href="#" class="modaloutside"></a>
-            <div class="modalbody">
-                <div class="modalcontent">
-                    <div class="modalmain">
-                        <div class="modaltitle">
-                            <p>Обратная связь</p>
-                        </div>
-                        <form class="myform" action="#" method="post">
-                            <label>Ваше имя *</label>
-                            
-                            <input type="text" name="name">
-                            
-                            <label>Телефон *</label>
-                            
-                            <input type="text" name="nubmer">
-                            
-                            <label>Email*</label>
-                            
-                            <input type="email" name="email">
-                            
-                            <label>Сообщение</label>
-                            <input type="text" class="message" >
-                            
-                           
-                                
-                            <input type="submit" name="submit" value="ОТПРАВИТЬ">
-                        </form>
-                        <a href="#" class="modalclose"><img class="modalcloseimg"
-                            src="img/closefeedback.png"
-                            title="closemodal"
-                            alt="closefeedbackimg"> 
-                            </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--HEADER-->
+        <!--HEADER-->   
         <header class="header">
             <div class="head">
                 <div class="headsection">
@@ -63,9 +26,45 @@
                             <div class="contacts">
                                 <p>+7(499) 777-77-77</p>
                                 <p>+7(499) 777-77-77</p>
-                                <div class="feedback">
-                                    <a href="#modal">Обратная связь</a>
-                                </div>
+                                <div class="popup" onclick="fadeIN()">
+                                    <a href="#">Обратная связь</a>
+                                        <div id="Popup" class="popupfeedback">
+                                            <a href="" class="popup-outside"></a>
+                                                <div class="popup-body">
+                                                    <div class="popup-content">
+                                                        <div class="popup-main">
+                                                            <div class="popup-title">
+                                                                <p>Обратная связь</p>
+                                                            </div>
+                                                            <form class="myform" action="#" method="post">
+                                                                <label>Ваше имя*</label>
+                                                                
+                                                                <input type="text" name="name">
+                                                                
+                                                                <label>Телефон*</label>
+                                                                
+                                                                <input type="text" name="nubmer">
+                                                                
+                                                                <label>Email*</label>
+                                                                
+                                                                <input type="email" name="email">
+                                                                
+                                                                <label>Сообщение</label>
+                                                                <input type="text" class="message" >
+                                                                
+                                                                
+                                                                <input type="submit" name="submit" value="ОТПРАВИТЬ">
+                                                            </form>
+                                                            <a href="" onclick="fadeOUT()" class="popup-close"><img class="popupcloseimg"
+                                                                src="img/closefeedback.png"
+                                                                title="closepopup"
+                                                                alt="closefeedbackimg"> 
+                                                                </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                             </div>
                         </div>
                     </div>
@@ -118,8 +117,10 @@
                     </div>
                     <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
-                    <!-- If we need navigation buttons -->
+                    <!-- If we need navigation buttons
                     <div class="buttonslider">
+                    -->
+                    <div class="slider-navigation">
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                     </div>
@@ -151,8 +152,8 @@
                                     <details>
                                         <summary>Бытовая техника</summary>
                                         <ul class="subcategories">
-                                            <li>Микроволновки</li>
-                                            <li>Холодильники</li>
+                                            <li><a href="#product">    Микроволновки</a></li>
+                                            <li><a href="#">Холодильники</a></li>
                                             <li>Посудомоечные машины</li>
                                             <li>Чайники</li>
                                         </ul>   
@@ -219,7 +220,127 @@
                         <div class="centerblock">
                             <div class="centerside">
                                 <div class="goods">
-                                    <div class="product">
+                                    <ul class="product" id="product">
+                                        <li>
+                                            <div class="view-item">
+                                                <img class="productimg"
+                                                src="img/catalog.png"
+                                                title="catalog"
+                                                alt="catalogimg">
+                                                <div class="titlecat">
+                                                    <a href="#">
+                                                        Самый клевый чайник, который надо купить!
+                                                    </a>
+                                                </div>
+                                                <div class="basketprice">
+                                                    <p class="price">1999 р.</p>
+                                                    <div class="basket">
+                                                        <a href="#"><img class="basketimg"
+                                                            src="img/basket.png"
+                                                            title="basket"
+                                                            alt="basketimg">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="view-item">
+                                                <img class="productimg"
+                                                src="img/catalog.png"
+                                                title="catalog"
+                                                alt="catalogimg">
+                                                <div class="titlecat">
+                                                    <a href="#">
+                                                        Самый клевый чайник, который надо купить!
+                                                    </a>
+                                                </div>
+                                                <div class="basketprice">
+                                                    <p class="price">1999 р.</p>
+                                                    <div class="basket">
+                                                        <a href="#"><img class="basketimg"
+                                                            src="img/basket.png"
+                                                            title="basket"
+                                                            alt="basketimg">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+
+                                        <li>
+                                            <div class="view-item">
+                                                <img class="productimg"
+                                                src="img/catalog.png"
+                                                title="catalog"
+                                                alt="catalogimg">
+                                                <div class="titlecat">
+                                                    <a href="#">
+                                                        Самый клевый чайник, который надо купить!
+                                                    </a>
+                                                </div>
+                                                <div class="basketprice">
+                                                    <p class="price">1999 р.</p>
+                                                    <div class="basket">
+                                                        <a href="#"><img class="basketimg"
+                                                            src="img/basket.png"
+                                                            title="basket"
+                                                            alt="basketimg">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="view-item">
+                                                <img class="productimg"
+                                                src="img/catalog.png"
+                                                title="catalog"
+                                                alt="catalogimg">
+                                                <div class="titlecat">
+                                                    <a href="#">
+                                                        Самый клевый чайник, который надо купить!
+                                                    </a>
+                                                </div>
+                                                <div class="basketprice">
+                                                    <p class="price">1999 р.</p>
+                                                    <div class="basket">
+                                                        <a href="#"><img class="basketimg"
+                                                            src="img/basket.png"
+                                                            title="basket"
+                                                            alt="basketimg">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="view-item">
+                                                <img class="productimg"
+                                                src="img/catalog.png"
+                                                title="catalog"
+                                                alt="catalogimg">
+                                                <div class="titlecat">
+                                                    <a href="#">
+                                                        Самый клевый чайник, который надо купить!
+                                                    </a>
+                                                </div>
+                                                <div class="basketprice">
+                                                    <p class="price">1999 р.</p>
+                                                    <div class="basket">
+                                                        <a href="#"><img class="basketimg"
+                                                            src="img/basket.png"
+                                                            title="basket"
+                                                            alt="basketimg">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <!--
                                         <div class="view-item">
                                             <img class="productimg"
                                             src="img/catalog.png"
@@ -242,7 +363,6 @@
                                             </div>
                                         </div>
 
-
                                         <div class="view-item">
                                             <img class="productimg"
                                             src="img/catalog.png"
@@ -308,29 +428,8 @@
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <div class="view-item">
-                                            <img class="productimg"
-                                            src="img/catalog.png"
-                                            title="catalog"
-                                            alt="catalogimg">
-                                            <div class="titlecat">
-                                                <a href="#">
-                                                    Самый клевый чайник, который надо купить!
-                                                </a>
-                                            </div>
-                                            <div class="basketprice">
-                                                <p class="price">1999 р.</p>
-                                                <div class="basket">
-                                                    <a href="#"><img class="basketimg"
-                                                        src="img/basket.png"
-                                                        title="basket"
-                                                        alt="basketimg">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    -->
+                                    </ul>
                                 </div>
                                 <div class="pagertype">
                                     <ul class="pager">
@@ -379,9 +478,6 @@
 
 
 
-
-
-
         <!--FOOTER-->
         <footer class="footer">
             <div class="footsection">
@@ -415,4 +511,5 @@
     </div>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://yandex.st/jquery/2.1.1/jquery.min.js"></script>
 </body>
