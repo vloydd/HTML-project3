@@ -108,10 +108,10 @@ for (i = 0; i < ctg.length; i++) {
         var div = document.getElementById("myPopup"); 
         div.style.display = 'block'; 
         div.classList.add("show");
-      }
+      } 
       */
 
-function fadeIN() {
+/*function fadeIN() {
         var div= document.getElementById("Popup");  
         div.classList.add("show");
 }
@@ -119,4 +119,41 @@ function fadeOUT(){
         var div = document.getElementById("Popup"); 
         div.classList.add("hide");
         div.style.display = 'none'; 
+}
+
+
+
+/*document.querySelector("button").addEventListener("click", FadeIn);*/
+/*document.querySelector("button").addEventListener("click", FadeOff);*/
+
+var a=document.getElementsByClassName("fade-in-out").addEventListener("click", doFade);
+var dof=document.getElementById("fadeInOut").addEventListener("click", doFade);
+var c=document.getElementById("fadeIn").addEventListener("click", FadeOn);
+var d=document.getElementById("fadeOut").addEventListener("click", FadeOff);
+var e=document.getElementById("fadeOut2").addEventListener("click", FadeOff);
+
+
+function doFade() {
+const fadeInOut = document.querySelector("#fade");
+const faderClass = "fadeout";
+    if (fadeInOut.classList.contains(faderClass)) {
+        fadeInOut.classList.remove(faderClass);
+    } else {
+        fadeInOut.classList.add(faderClass);
+    }
+}
+
+function FadeOff() {
+    const fadeIn = document.querySelector("#fade");
+    const faderoutcl = "fadeout";
+    if (!(fadeIn.classList.contains(faderoutcl))) {
+        fadeIn.classList.add(faderoutcl);
+    }
+}
+function FadeOn() {
+    const fadeInOut = document.querySelector("#fade");
+    const faderClass = "fadeout";
+    if (fadeInOut.classList.contains(faderClass)) {
+    fadeInOut.classList.remove(faderClass);
+    }
 }

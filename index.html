@@ -26,45 +26,11 @@
                             <div class="contacts">
                                 <p>+7(499) 777-77-77</p>
                                 <p>+7(499) 777-77-77</p>
-                                <div class="popup" onclick="fadeIN()">
-                                    <a href="#">Обратная связь</a>
-                                        <div id="Popup" class="popupfeedback">
-                                            <a href="" class="popup-outside"></a>
-                                                <div class="popup-body">
-                                                    <div class="popup-content">
-                                                        <div class="popup-main">
-                                                            <div class="popup-title">
-                                                                <p>Обратная связь</p>
-                                                            </div>
-                                                            <form class="myform" action="#" method="post">
-                                                                <label>Ваше имя*</label>
-                                                                
-                                                                <input type="text" name="name">
-                                                                
-                                                                <label>Телефон*</label>
-                                                                
-                                                                <input type="text" name="nubmer">
-                                                                
-                                                                <label>Email*</label>
-                                                                
-                                                                <input type="email" name="email">
-                                                                
-                                                                <label>Сообщение</label>
-                                                                <input type="text" class="message" >
-                                                                
-                                                                
-                                                                <input type="submit" name="submit" value="ОТПРАВИТЬ">
-                                                            </form>
-                                                            <a href="" onclick="fadeOUT()" class="popup-close"><img class="popupcloseimg"
-                                                                src="img/closefeedback.png"
-                                                                title="closepopup"
-                                                                alt="closefeedbackimg"> 
-                                                                </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="feedback">
+                                    <a href="" onclick="FadeOn()">Обратная связь</a>
+                                    <p><button></button></p>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -133,6 +99,7 @@
                         <li><a href="#">Главная</a></li>
                         <li><a href="#">Каталог</a></li>
                         <li><a href="#">Бытовая техника</a></li>
+                        <button onclick="doFade()" id="fadeOn">FadeOn</button>
                     </ul>
                     <div class="catalogbl">
                         <div class="leftblock">
@@ -508,7 +475,77 @@
                 </div>
             </div>
         </footer>
-    </div>
+
+    <div id="fade">
+    <div class="popup-body">
+<div class="popup-content">
+        <div class="popup-main">
+                <div class="popup-title">
+                    <p>Обратная связь</p>
+                        </div>
+                        <form class="myform" action="#" method="get">
+                            <label>Ваше имя*</label>
+                                <input type="text" name="name" placeholder="" required>
+                                    <label>Телефон*</label>
+                                        <input type="text" name="tel" placeholder="" required>
+                                            <label>Email*</label>
+                                                <input type="email" name="email" placeholder="" required>	<!--oninvalid="setCustomValidity('Must be 4 Characters')" oninput="setCustomValidity('')"-->
+                                                        <label>Сообщение</label>
+                                                            <input type="text" class="message" >
+
+                                                            <input type="submit" name="submit" value="ОТПРАВИТЬ">
+                                                        </form>
+                                                        <button onclick="FadeOff()" class="popup-close"><img class="popupcloseimg"
+                                                            src="img/closefeedback.png"
+                                                            title="closepopup"
+                                                            alt="closefeedbackimg"> 
+                                                            </button>
+                                                        
+                                                        <p><button onclick="FadeOff()" id="fadeOut2">FadeOut2</button></p>
+                                                        <button onclick="doFade()" id="fadeOn">FadeOn</button>
+                                                            </a>
+                                                    </div>
+                                                </div>
+                                        </div>
+</div>
+</div>
+
+
+                                    <!--<div class="popup" onclick="fadeIN()">
+                                    <a href="#">Обратная связь</a>
+                                        <div id="Popup" class="popupfeedback">
+                                            <a href="" class="popup-outside"></a>
+                                                <div class="popup-body">
+                                                    <div class="popup-content">
+                                                        <div class="popup-main">
+                                                            <div class="popup-title">
+                                                                <p>Обратная связь</p>
+                                                            </div>
+                                                            <form class="myform" action="#" method="get">
+                                                                <label>Ваше имя*</label>
+                                                                
+                                                                <input type="text" name="name" placeholder="" required>
+                                                                
+                                                                <label>Телефон*</label>
+                                                                
+                                                                <input type="text" name="tel" placeholder="" required>
+                                                                
+                                                                <label>Email*</label>
+                                                                
+                                                                <input type="email" name="email" placeholder="" required
+                                                                oninvalid="setCustomValidity('Must be 4 Characters')" oninput="setCustomValidity('')">
+                                                                
+                                                                <label>Сообщение</label>
+                                                                <input type="text" class="message" >
+                                                                
+                                                                
+                                                                <input type="submit" name="submit" value="ОТПРАВИТЬ">
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>-->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script src="https://yandex.st/jquery/2.1.1/jquery.min.js"></script>

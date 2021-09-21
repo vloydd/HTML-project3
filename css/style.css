@@ -71,7 +71,7 @@ hr {
     font-weight: 300;
     color: #767676;
 }
-.popup a {
+.feedback a {
     font-size: 24px;
     height: 23px;
     font-weight: 900;
@@ -617,11 +617,58 @@ text-decoration: underline;
 }
 
 */
+
+
+details summary {
+    cursor: pointer;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+details {
+    list-style: disc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#fade {
+    opacity: 1;
+    transition: opacity linear 0.8s 0s;
+    background-color: gray;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index:9999; 
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+#fade.fadeout {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity linear 0.8s 0s;
+}
+
+
 .popup {
 
 }
 
- .popupfeedback {
+/* .popupfeedback {
     visibility: hidden;
     position: fixed;
     z-index: 1;
@@ -637,8 +684,7 @@ text-decoration: underline;
     top: 0;
     overflow-y: auto;
     overflow-x: hidden;
-    /*display: none;*/
-}
+}*/
 
 .popup-outside {
     position: absolute;
@@ -647,28 +693,17 @@ text-decoration: underline;
 }
 
 
-.popup .show {
+/*.popup .show {
     visibility: visible;
     animation: fadeIn 1s;
-    /*display: block;*/ 
     opacity: 1;
 }
 .popup .hide {
-    /*display: none;*/
     animation: fadeOut  1s;
     opacity: 0;
     visibility: hidden;
-}
+}*/
 
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-}
-
-@keyframes fadeOut {
-    from {opacity: 1;}
-    to {opacity:0;}
-}
 
 .popup-body {
     min-height :100%;
@@ -715,6 +750,7 @@ text-decoration: underline;
     right: -27px;
     top: -27px;
     background-color: #777777;
+    border: none;   
     
 }
 .popupcloseimg {
@@ -753,6 +789,7 @@ text-decoration: underline;
     border: 1px solid #c3c3c3;
 }
 .myform input {
+    display: block;
     margin: 0 auto;
     width: 319px;
     height: 42px;
@@ -777,14 +814,14 @@ text-decoration: underline;
     border: 1px solid #c3c3c3;
 }       
 
-details summary {
-    cursor: pointer;
-    list-style: none;
-    font-size: 18px;
-    font-weight: 400;
+
+
+input:invalid {
+    background: radial-gradient(white, 60%, #f9dddd);
+    border: 3px solid #ff8383;
 }
-details {
-    list-style: disc;
+input:focus {
+    color: red;
 }
 
 /*https://swiperjs.com/swiper-api#swiper-full-html-layout
