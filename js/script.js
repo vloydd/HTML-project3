@@ -156,13 +156,20 @@ const form = document.getElementById('form');
 form.addEventListener('submit', formSend);
 
 async function formSend(e) {
-    e.preventDefault();
+
+    //e.preventDefault();
 
     let error = formValidate(form);
     document.getElementById("error").innerHTML = error;
+    if (error > 0) {
+        e.preventDefault();
+    }
     if (error === 0) {
-        let response = await fetch('sendmail.php', { method: 'get' });
+        //let response = await fetch('sendmail.php', { method: 'get' });
         //return true;
+        //break;
+        e.stopImmediatePropagation();
+        return true;
     }
 
     //let formData = new FormData(form);
