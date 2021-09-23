@@ -14,7 +14,6 @@
 
 <body>
     <div id="container">
-        <!--<form class="myform" action="forms.php" method="GET"> <!--PHP REQUIRED-->
         <!--HEADER-->
         <header class="header">
             <div class="head">
@@ -28,7 +27,6 @@
                                 <div class="feedback" onclick="FadeOn()">
                                     <a href="#" onclick="FadeOn()">Обратная связь</a>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -56,16 +54,8 @@
                 </div>
             </menu>
             <!--SLIDER-->
-            <slider class="slider">
-                <!--div class="sldsection">
-                    <img class="sliderimage" src="img/slider1.png" alt="slider" title="sliderimg">
-                    </!--div>
-
-                    
-
-                <!-- Slider main container -->
+            <slider class="slider">          
                 <div class="image-slider swiper-container">
-
                     <div class="image-slider__wrapper swiper-wrapper">
                         <!-- Slides -->
                         <div class="image-slider__wrapper swiper-slide">
@@ -79,11 +69,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="swiper-pagination"></div>
-                    <!-- If we need navigation buttons
-                    <div class="buttonslider">
-                    -->
                     <div class="slider-navigation">
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
@@ -97,7 +82,6 @@
                         <li><a href="#">Главная</a></li>
                         <li><a href="#">Каталог</a></li>
                         <li><a href="#">Бытовая техника</a></li>
-                        <button onclick="doFade()" id="fadeOn">FadeOn</button>
                     </ul>
                     <div class="catalogbl">
                         <div class="leftblock">
@@ -117,8 +101,8 @@
                                     <details>
                                         <summary>Бытовая техника</summary>
                                         <ul class="subcategories">
-                                            <li><a href="#product">    Микроволновки</a></li>
-                                            <li><a href="#">Холодильники</a></li>
+                                            <li>Микроволновки</li>
+                                            <li>Холодильники</li>
                                             <li>Посудомоечные машины</li>
                                             <li>Чайники</li>
                                         </ul>
@@ -272,109 +256,18 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <!--
-                                        <div class="view-item">
-                                            <img class="productimg"
-                                            src="img/catalog.png"
-                                            title="catalog"
-                                            alt="catalogimg">
-                                            <div class="titlecat">
-                                                <a href="#">
-                                                    Самый клевый чайник, который надо купить!
-                                                </a>
-                                            </div>
-                                            <div class="basketprice">
-                                                <p class="price">1999 р.</p>
-                                                <div class="basket">
-                                                    <a href="#"><img class="basketimg"
-                                                        src="img/basket.png"
-                                                        title="basket"
-                                                        alt="basketimg">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="view-item">
-                                            <img class="productimg"
-                                            src="img/catalog.png"
-                                            title="catalog"
-                                            alt="catalogimg">
-                                            <div class="titlecat">
-                                                <a href="#">
-                                                    Самый клевый чайник, который надо купить!
-                                                </a>
-                                            </div>
-                                            <div class="basketprice">
-                                                <p class="price">1999 р.</p>
-                                                <div class="basket">
-                                                    <a href="#"><img class="basketimg"
-                                                        src="img/basket.png"
-                                                        title="basket"
-                                                        alt="basketimg">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="view-item">
-                                            <img class="productimg"
-                                            src="img/catalog.png"
-                                            title="catalog"
-                                            alt="catalogimg">
-                                            <div class="titlecat">
-                                                <a href="#">
-                                                    Самый клевый чайник, который надо купить!
-                                                </a>
-                                            </div>
-                                            <div class="basketprice">
-                                                <p class="price">1999 р.</p>
-                                                <div class="basket">
-                                                    <a href="#"><img class="basketimg"
-                                                        src="img/basket.png"
-                                                        title="basket"
-                                                        alt="basketimg">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="view-item">
-                                            <img class="productimg"
-                                            src="img/catalog.png"
-                                            title="catalog"
-                                            alt="catalogimg">
-                                            <div class="titlecat">
-                                                <a href="#">
-                                                    Самый клевый чайник, который надо купить!
-                                                </a>
-                                            </div>
-                                            <div class="basketprice">
-                                                <p class="price">1999 р.</p>
-                                                <div class="basket">
-                                                    <a href="#"><img class="basketimg"
-                                                        src="img/basket.png"
-                                                        title="basket"
-                                                        alt="basketimg">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    -->
                                     </ul>
                                 </div>
-                                <div class="pagertype">
+                                <!--PAGER-->
+                                <div class="pagerwrapper">
                                     <ul class="pager">
-                                        <!--<li class="pager-numbers first">Page 2 of 3</li>
-                                    <li class="pager-previous"><a href="#" title="Go to previous page" class="active">‹ previous</a></li>-->
-                                        <li class="pager-item"><a href="#" title="Go to page 1" class="active">1</a></li>
-                                        <li class="pager-item"><a href="#" title="Go to page 2" class="active">2</a></li>
-                                        <li class="pager-current">3</li>
-                                        <li class="pager-item"><a href="#" title="Go to page 4" class="active">4</a></li>
-                                        <li class="pager-item"><a href="#" title="Go to page 5" class="active">5</a></li>
-                                        <li class="pager-item"><a href="#" title="Go to page 6" class="active">6</a></li>
-                                        <li class="pager-item"><a href="#" title="Go to page 7" class="active">7</a></li>
-                                        <!--<li class="last"><a href="#" class="active">Next ››</a></li>-->
+                                        <li class="pg-item"><a href="#">1</a></li>
+                                        <li class="pg-item"><a href="#">2</a></li>
+                                        <li class="pg-current">3</li>
+                                        <li class="pg-item"><a href="#">4</a></li>
+                                        <li class="pg-item"><a href="#">5</a></li>
+                                        <li class="pg-item"><a href="#">6</a></li>
+                                        <li class="pg-item"><a href="#">7</a></li>
                                     </ul>
                                 </div>
                                 <hr>
@@ -395,12 +288,6 @@
                 </div>
             </content>
         </div>
-
-
-
-
-
-
 
 
 
@@ -433,7 +320,9 @@
             </div>
         </footer>
 
-        <div id="fade" class="fadeout">
+
+        <!--FEEDBACK-->
+        <div id="feedback" class="fadeout">
             <div class="popup-body">
                 <div class="popup-content">
                     <div class="popup-main">
@@ -441,9 +330,6 @@
                             <p>Обратная связь</p>
                         </div>
                         <form id="form" class="myform" action="#" method="get">
-
-
-
                             <div class="form__item">
                                 <label class="form__label">Ваше имя*</label>
                                 <input type="text" id="name" name="name" class="form__input _req" onfocus="this.value=''">
@@ -460,7 +346,9 @@
                                 <label class="form__label">Сообщение</label>
                                 <textarea name="message" id="message" class="form__input"></textarea>
                             </div>
-                            <div id="error"></div>
+                            
+                                <div id="error"></div>
+                            
                             <input type="submit" name="submit" value="ОТПРАВИТЬ">
                         </form>
                         <button onclick="FadeOff()" class="popup-close"><img class="popupcloseimg"

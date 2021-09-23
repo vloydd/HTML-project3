@@ -118,7 +118,6 @@ hr {
 
 
 /*MAIN (i mean it's menu bar, slider and content)*/
-
 .main {
     flex-grow: 1;
 }
@@ -153,24 +152,29 @@ hr {
 .menu li {
     margin: 26px 0;
     list-style: none;
-    border-right: 2px #ffffff solid;
+   /* border-right: 2px #ffffff solid;*/
     height: 20px;
+}
+
+.menu li::before {
+    content: '|';
+    color: #ffffff;
+    font-family: 'PT Sans';
+    font-size: 28px;
+    color: #ffffff;
+}
+.menu li:first-child::before {
+    content: none;
 }
 
 .menu a {
     text-align: justify;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 400;
     letter-spacing: 0.025em;
     color: #ffffff;
     text-decoration: none;
     margin: 0 20px;
-    margin-bottom: 5px;
-    height: 27px;
-}
-
-.menu li:last-child {
-    border-right: none;
 }
 
 .menu a:hover {
@@ -365,18 +369,10 @@ ul.breadcr li+li:before {
     color: #767676;
 }
 
-.subcategories li a:active {
-    background-color: #010101;
-}
 
-.subcategories li a:visited {
-    color: green;
-}
-
-
-/*.show:visited{
+.show:visited{
     color: black;
-} */
+} 
 
 .show:active {
     color: black;
@@ -410,20 +406,36 @@ ul.breadcr li+li:before {
     text-decoration: underline;
 }
 
-
-/*.subcategories li, .show {
-    font-size: 14px;
-    line-height: 22px;
-}*/
-
 .hide {
     font-size: 18px;
 }
 
 
-/*.subcategories li:visited {
-    color: black;
-}*/
+.categories span {
+    cursor: pointer;
+}
+
+details summary {
+    cursor: pointer;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+details {
+    list-style: disc;
+    cursor: pointer;
+}
+.subcategories li a:active {
+    color: #010101;
+}
+.subcategories li:hover  {
+    color: #010101;
+}
+.subcategories li:target  {
+    color: #010101;
+}
+
 
 .leftlogo {
     margin: 110px auto 0 auto;
@@ -450,8 +462,6 @@ ul.breadcr li+li:before {
 /*CENTERBLOCK OF CATALOLOG*/
 
 .centerblock {
-    /*display: flex;
-    /* flex-direction: column;*/
     margin: auto;
     margin-bottom: 202px;
     width: 780px;
@@ -464,11 +474,9 @@ ul.breadcr li+li:before {
 .product {
     display: flex;
     flex-wrap: wrap;
-    /*flex-direction: row;*/
     padding: 0;
     margin: 0;
     width: 780px;
-    /*height: 780px;*/
 }
 
 .product li {
@@ -494,8 +502,6 @@ ul.breadcr li+li:before {
     display: block;
     background-color: #dcdcdc;
     display: inline-block;
-    /*margin-bottom: 20px;*/
-    /*margin: auto;   */
 }
 
 .productimg {
@@ -557,10 +563,6 @@ ul.breadcr li+li:before {
     height: 21px;
 }
 
-.pagertype {
-    margin-left: 30px;
-    margin: auto;
-}
 
 .pager {
     list-style: none;
@@ -574,21 +576,6 @@ ul.breadcr li+li:before {
     margin: 0 10px;
     padding: 0;
 }
-
-
-/*.pager {
-    list-style:none none;
-    margin-top: 10px;
-    margin-bottom: 30;
-    padding:0;
-    font-family: 'PT Sans';
-    font-size: 10px;
-    line-height: 22px;
-    font-weight: 400;
-    letter-spacing: 0.565em;
-    color: #767676;
-}*/
-
 .pager li a {
     font-family: 'PT Sans';
     font-size: 14px;
@@ -599,8 +586,8 @@ ul.breadcr li+li:before {
     text-decoration: none;
 }
 
-.pager .pager-current {
-    Font-size: 18px;
+.pager .pg-current {
+    font-size: 18px;
     margin: 0 11px;
     color: #444444;
 }
@@ -722,22 +709,10 @@ ul.breadcr li+li:before {
     text-decoration: underline #a7a7a7 2px;
 }
 
-.categories span {
-    cursor: pointer;
-}
 
-details summary {
-    cursor: pointer;
-    list-style: none;
-    font-size: 18px;
-    font-weight: 400;
-}
 
-details {
-    list-style: disc;
-}
-
-#fade {
+/*POPUP in FADE*/
+#feedback {
     opacity: 1;
     transition: opacity linear 0.8s 0s;
     background-color: gray;
@@ -750,51 +725,16 @@ details {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-#fade.fadeout {
+#feedback.fadeout {
     opacity: 0;
     visibility: hidden;
     transition: opacity linear 0.8s 0s;
 }
 
-
-/* .popupfeedback {
-    visibility: hidden;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index:9999; 
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    left: 0;
-    top: 0;
-    overflow-y: auto;
-    overflow-x: hidden;
-}*/
-
-
-/*.popup-outside {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-
-/*.popup .show {
-    visibility: visible;
-    animation: fadeIn 1s;
-    opacity: 1;
-}
-.popup .hide {
-    animation: fadeOut  1s;
-    opacity: 0;
-    visibility: hidden;
-}*/
 
 .popup-body {
     min-height: 100%;
@@ -809,7 +749,7 @@ details {
     background-color: #ffffff;
     color: #535353;
     width: 466px;
-    height: 578px;
+    /*height: 578px;*/
     position: relative;
 }
 
@@ -912,7 +852,7 @@ details {
 
 .form__item ._error {
     box-shadow: inset 0 0 15px #fac3c3;
-    border: 3px solid #fd9898;
+    border: 1px solid #fd9898;
     font-family: 'PT Sans';
     font-size: 14px;
     line-height: 1.2;
@@ -939,121 +879,6 @@ details {
 }
 
 
-/*input:invalid {
-    background: radial-gradient(white, 60%, #f9dddd);
-    border: 3px solid #ff8383;
-}
-
-input:focus {
-    color: red;
-}*/
-
-
 /*https://swiperjs.com/swiper-api#swiper-full-html-layout
 https://codepen.io/aaronkahlhamer/embed/oeVQxQ?#result-box
 https://medium.com/@networkaaron/swiper-relocating-previous-and-next-buttons-1ae792f22ef
-
-
-
-
-*
-.popup-fade {
-	display: none;
-}
-.popup-fade:before {
-	content: '';
-	background: #000;
-	position: fixed; 
-	left: 0;
-	top: 0;
-	width: 100%; 
-	height: 100%;
-	opacity: 0.7;
-	z-index: 9999;
-}
-.popup {
-	position: fixed;
-	top: 20%;
-	left: 50%;
-	padding: 20px;
-	width: 360px;
-	margin-left: -200px;	
-	background: #fff;
-	border: 1px solid orange;
-	border-radius: 4px; 
-	z-index: 99999;
-	opacity: 1;	
-}
-.popup-close {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-}
-
-
-
-
-
-/*#modal{
-    opacity: 0;
-    transition: ease opacity 5s;
-  }
-#modal.fadeInclass{
-    opacity: 1;
-} 
-
-*/
-
-
-/*.popup {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-    animation: modal 0.3s alternate ease;
-}
-
-.popup.is-active{
-    display: flex;
-    animation: modal 0.4s alternate ease;
-}
-
-@keyframes modal {
-    0% {opacity: 0;};
-    100% {opacity: 1;};
-}
-
-.popup-content {
-    width: 300px;
-    padding: 20px;
-    background-color: tomato;
-    box-shadow: 0px 0px 31px -7px rgb(255, 99, 71);
-}
-
-.popup-content .popup-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 10px;
-}
-
-.popup-content .popup-header .close {
-    font-size: 40px;
-    cursor: pointer;
-}
-
-.popup-content .popup-header .close:hover {
-    opacity: 0.8;
-}
-
-.popup-content .popup-body {
-    padding-bottom: 10px;
-    line-height: 35px;   
-    text-align: center;
-}
